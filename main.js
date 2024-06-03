@@ -1,24 +1,99 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+<header class="header">
+<nav class="nav-bar">
+  <div class="logo">
+    <h3>Jonas Mokawane</h3>
   </div>
-`
+  <ul>
+    <li id="skills">Skills</li>
+    <li id="projects">Projects</li>
+    <li id="contacts">Contacts</li>
+  </ul>
+</nav>
+</header>
+<div class="intro">
+<div class="info">
+<h1><span class="intro-header">Frontend Developer.</span></h1>
+<p>
+  <span class="intro-text"
+    >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+    aperiam dolorum ipsum natus quisquam debitis incidunt consequuntur
+    quibusdam magni ex dolore saepe qui? Natus magnam placeat dolor ad
+    recusandae laboriosam?</span
+  >
+</p>
+</div>
+<div class="jm-img">
+  <img class="profile-img" src="/dev-jonas-01.jpg" alt="jm's picture">
+</div>
+</div>
 
-setupCounter(document.querySelector('#counter'))
+<div id="modal-skills" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-skills">&times;</span>
+    <p>Skills Content Goes Here</p>
+    <div>
+    <img  class="images" src="/Git.png">
+    <img  class="images" src="/html.png">
+    <img  class="images" src="/CSS3.png">
+    <img class="images" src="/tailwind.png">
+    <img class="images" src="javascript.png">
+  </div>
+  </div>
+</div>
+
+<div id="modal-projects" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-projects">&times;</span>
+    <p>Projects Content Goes Here</p>
+    <div class="projects-grid">
+    <div class="project-item"><img class="proj-itms" src="/agile-board.png"></div>
+    <div class="project-item"><img class="proj-itms" src="/book-connect.png"></div>
+    <div class="project-item"><img class="proj-itms" src="blackjack.png"></div>
+    <div class="project-item"><img class="proj-itms" src=""></div>
+  </div>
+  </div>
+</div>
+
+<div id="modal-contacts" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-contacts">&times;</span>
+    <p>Contacts Content Goes Here</p>
+  </div>
+</div>
+`
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'block';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+}
+
+// Add event listeners to the list items to open the corresponding modal
+document.getElementById('skills').addEventListener('click', function() {
+  openModal('modal-skills');
+});
+document.getElementById('projects').addEventListener('click', function() {
+  openModal('modal-projects');
+});
+document.getElementById('contacts').addEventListener('click', function() {
+  openModal('modal-contacts');
+});
+
+// Add event listeners to close buttons in each modal
+document.querySelectorAll('.close').forEach(function(span) {
+  span.addEventListener('click', function() {
+    const modalId = this.getAttribute('data-modal');
+    closeModal(modalId);
+  });
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    closeModal(event.target.id);
+  }
+}
