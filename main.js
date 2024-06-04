@@ -1,6 +1,8 @@
-import './style.css'
+// Importing CSS file.
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
+// Setting the inner HTML of the div element with "app" id.
+document.querySelector("#app").innerHTML = `
 <header class="header">
 <nav class="nav-bar">
   <div class="logo">
@@ -27,6 +29,9 @@ document.querySelector('#app').innerHTML = `
 </div>
 </div>
 
+/**
+ * Modal for displaying skills
+ */
 <div id="modal-skills" class="modal">
   <div class="modal-content">
     <span class="close" data-modal="modal-skills">&times;</span>
@@ -41,6 +46,9 @@ document.querySelector('#app').innerHTML = `
   </div>
 </div>
 
+/**
+ * Modal for displaying projects.
+ */
 <div id="modal-projects" class="modal">
   <div class="modal-content">
     <span class="close" data-modal="modal-projects">&times;</span>
@@ -54,6 +62,9 @@ document.querySelector('#app').innerHTML = `
   </div>
 </div>
 
+/**
+ * Modal for displaying contacts.
+ */
 <div id="modal-contacts" class="modal">
   <div class="modal-content">
     <span class="close" data-modal="modal-contacts">&times;</span>
@@ -66,37 +77,39 @@ document.querySelector('#app').innerHTML = `
   </div>
   </div>
 </div>
-`
+`;
+// Function to open a modal with its id.
 function openModal(modalId) {
-  document.getElementById(modalId).style.display = 'block';
+  document.getElementById(modalId).style.display = "block";
 }
 
+//Function to close modal with its id.
 function closeModal(modalId) {
-  document.getElementById(modalId).style.display = 'none';
+  document.getElementById(modalId).style.display = "none";
 }
 
 // Add event listeners to the list items to open the corresponding modal
-document.getElementById('skills').addEventListener('click', function() {
-  openModal('modal-skills');
+document.getElementById("skills").addEventListener("click", function () {
+  openModal("modal-skills");
 });
-document.getElementById('projects').addEventListener('click', function() {
-  openModal('modal-projects');
+document.getElementById("projects").addEventListener("click", function () {
+  openModal("modal-projects");
 });
-document.getElementById('contacts').addEventListener('click', function() {
-  openModal('modal-contacts');
+document.getElementById("contacts").addEventListener("click", function () {
+  openModal("modal-contacts");
 });
 
 // Add event listeners to close buttons in each modal
-document.querySelectorAll('.close').forEach(function(span) {
-  span.addEventListener('click', function() {
-    const modalId = this.getAttribute('data-modal');
+document.querySelectorAll(".close").forEach(function (span) {
+  span.addEventListener("click", function () {
+    const modalId = this.getAttribute("data-modal");
     closeModal(modalId);
   });
 });
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target.classList.contains('modal')) {
+window.onclick = function (event) {
+  if (event.target.classList.contains("modal")) {
     closeModal(event.target.id);
   }
-}
+};
