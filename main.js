@@ -18,10 +18,7 @@ document.querySelector('#app').innerHTML = `
 <h1><span class="intro-header">Frontend Developer.</span></h1>
 <p>
   <span class="intro-text"
-    >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
-    aperiam dolorum ipsum natus quisquam debitis incidunt consequuntur
-    quibusdam magni ex dolore saepe qui? Natus magnam placeat dolor ad
-    recusandae laboriosam?</span
+    >Hello there, My name is Jonas Mokawane. I am a frontend Junior Developer with specialties in, UI, UX and web development/Applications</span
   >
 </p>
 </div>
@@ -33,7 +30,7 @@ document.querySelector('#app').innerHTML = `
 <div id="modal-skills" class="modal">
   <div class="modal-content">
     <span class="close" data-modal="modal-skills">&times;</span>
-    <p>Skills Content Goes Here</p>
+    <p>My Skills</p>
     <div>
     <img  class="images" src="/Git.png">
     <img  class="images" src="/html.png">
@@ -47,12 +44,12 @@ document.querySelector('#app').innerHTML = `
 <div id="modal-projects" class="modal">
   <div class="modal-content">
     <span class="close" data-modal="modal-projects">&times;</span>
-    <p>Projects Content Goes Here</p>
+    <p>My Projects</p>
     <div class="projects-grid">
-    <div class="project-item"><img class="proj-itms" src="/agile-board.png"></div>
-    <div class="project-item"><img class="proj-itms" src="/book-connect.png"></div>
-    <div class="project-item"><img class="proj-itms" src="blackjack.png"></div>
-    <div class="project-item"><img class="proj-itms" src=""></div>
+    <div class="project-item"><a href="https://mokawane.github.io/SEEMOK507_BCL2401_GroupB_Jonas-Mokawane_JSL11/"><img class="proj-itms" src="/agile-board.png"></a></div>
+    <div class="project-item"><a href="https://mokawane.github.io/SEEMOK507_BCL2401_GroupB_Jonas-Mokawane_DJS03/"><img class="proj-itms" src="/book-connect.png"></a></div>
+    <div class="project-item"><a href="https://mokawane.github.io/BlackJack-game/"><img class="proj-itms" src="blackjack.png"></a></div>
+    <div class="project-item"><a href="https://mokawane.github.io/SEEMOK507_BCL2401_GroupB_Jonas-Mokawane_DJS07/"><img class="proj-itms" src="/meme-generator.png"></a></div>
   </div>
   </div>
 </div>
@@ -60,7 +57,13 @@ document.querySelector('#app').innerHTML = `
 <div id="modal-contacts" class="modal">
   <div class="modal-content">
     <span class="close" data-modal="modal-contacts">&times;</span>
-    <p>Contacts Content Goes Here</p>
+    <p>Contact Me</p>
+    <div class="contacts-grid">
+    <div class="contact-item"><a href="https://github.com/Mokawane" target="_blank"><img class="conts-itms" src="/github.png"></a></div>
+    <div class="contact-item"><a href="https://linkedin.com/in/jonas-mokawane-692939205?trk=contact-info" target="_blank"><img class="conts-itms" src="/linkedin.png"></a></div>
+    <div class="contact-item"><a href="https://instagram.com/_jay_za?igsh=ajV2M2dza3M5NzNo" target="_blank"><img class="conts-itms" src="/instagram.jpeg"></a></div>
+    <div class="contact-item"><a href="mailto:jonas.mokawane98@gmail.com"><img class="conts-itms" src="/gmail.png"></a></div>
+  </div>
   </div>
 </div>
 `
