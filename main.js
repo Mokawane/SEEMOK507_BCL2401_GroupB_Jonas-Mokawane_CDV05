@@ -20,7 +20,7 @@ document.querySelector("#app").innerHTML = `
 <h1><span class="intro-header">Frontend Developer.</span></h1>
 <p>
   <span class="intro-text"
-    >Hello there, My name is Jonas Mokawane. I am a frontend Junior Developer with specialties in, UI, UX and web development/Applications</span
+    >Hello there, My name is Jonas Mokawane. I am a frontend Junior Developer with specialties in, UI, UX and web development / Applications</span
   >
 </p>
 </div>
