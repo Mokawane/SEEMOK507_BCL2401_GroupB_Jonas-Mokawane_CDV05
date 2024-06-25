@@ -56,8 +56,8 @@ document.querySelector("#app").innerHTML = `
     <div class="projects-grid">
     <div class="project-item"><a href="https://mokawane.github.io/SEEMOK507_BCL2401_GroupB_Jonas-Mokawane_JSL11/"><img class="proj-itms" src="/agile-board.png"></a></div>
     <div class="project-item"><a href="https://mokawane.github.io/SEEMOK507_BCL2401_GroupB_Jonas-Mokawane_DJS03/"><img class="proj-itms" src="/book-connect.png"></a></div>
-    <div class="project-item"><a href="https://mokawane.github.io/BlackJack-game/"><img class="proj-itms" src="blackjack.png"></a></div>
-    <div class="project-item"><a href="https://mokawane.github.io/SEEMOK507_BCL2401_GroupB_Jonas-Mokawane_DJS07/"><img class="proj-itms" src="/meme-generator.png"></a></div>
+    <div class="project-item"><a href="https://black-jack-game-lime.vercel.app/"><img class="proj-itms" src="blackjack.png"></a></div>
+    <div class="projectSEEMOK507_BCL2401_GroupB_Jonas-Mokawane_DJS07-item"><a href="https://seemok-507-bcl-2401-group-b-jonas-mokawane-djs-07-3ufkquss2.vercel.app/"><img class="proj-itms" src="/meme-generator.png"></a></div>
   </div>
   </div>
 </div>
